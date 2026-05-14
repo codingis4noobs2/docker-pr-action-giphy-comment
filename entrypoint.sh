@@ -16,7 +16,7 @@ comment_response=$(curl -L \
   -X POST \
   -H "Accept: application/vnd.github+json" \
   -H "Authorization: Bearer ${GITHUB_TOKEN}" \
-  https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${PULL_NUMBER}/comments \
+  https://api.github.com/repos/${GITHUB_REPOSITORY}/pulls/${PULL_NUMBER}/comments \
   -d '{"body":"Great stuff! \n ![GIF](${gif_url})"')
 
 comment_url=$(echo $comment_response | jq --raw-output .html_url)
