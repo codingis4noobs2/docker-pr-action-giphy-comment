@@ -1,3 +1,3 @@
 # docker-pr-action-giphy-comment
 
-hello
+hello, world!
